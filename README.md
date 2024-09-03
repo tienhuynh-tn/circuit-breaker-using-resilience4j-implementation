@@ -10,6 +10,8 @@ Other mechanisms work alongside the circuit breaker pattern to enhance system re
 
 ## How the Circuit Breaker Pattern Works
 
+![](https://media.geeksforgeeks.org/wp-content/uploads/20240404185609/What-is-Circuit-Breaker-Pattern-in-Microservices.webp)
+
 The circuit breaker pattern is designed to prevent cascading failures in microservices by managing the flow of requests between services based on their availability. It operates with three states: **Closed**, **Open**, and **Half-Open**.
 
 1. **Closed State**:  
