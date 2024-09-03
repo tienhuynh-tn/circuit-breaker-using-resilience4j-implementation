@@ -24,6 +24,7 @@ The circuit breaker pattern is designed to prevent cascading failures in microse
 The flow between these states helps reduce the number of calls to a failing service and prevents wasting resources. If the service recovers, the circuit breaker returns to normal operation; if not, it continues to block requests until the service becomes available again. This mechanism ensures a more resilient microservices architecture by handling service failures gracefully and avoiding cascading failures.
 
 # References
+- Course: [Building Microservices with Spring Boot & Spring Cloud](https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/) by [Ramesh Fadatare (Java Guides)](https://www.udemy.com/user/ramesh-fadatare/)
 - [TBU](https://spring.io/projects/spring-cloud-circuitbreaker)
 - [TBU](https://resilience4j.readme.io/)
 - [TBU](https://resilience4j.readme.io/docs/circuitbreaker)
