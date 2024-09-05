@@ -1,5 +1,15 @@
 # Circuit Breaker using Resilience4J Implementation
 
+## Table of Contents
+- [What Problems Does the Circuit Breaker Pattern Solve](#what-problems-does-the-circuit-breaker-pattern-solve)
+- [How the Circuit Breaker Pattern Works](#how-the-circuit-breaker-pattern-works)
+- [Technologies Used](#technologies-used)
+- [Architecture Overview](#architecture-overview)
+- [Setup and Run Instructions](#setup-and-run-instructions)
+- [References](#references)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## What Problems Does the Circuit Breaker Pattern Solve?
 
 In a microservices architecture, services are often interdependent, forming a chain of calls. For example, if Microservice One calls Microservice Two, which in turn calls Microservice Three, and so on, the failure of one service can impact the entire chain. If Microservice Four becomes unavailable or experiences slow performance, Microservice Three, which depends on it, will be affected. This, in turn, impacts Microservice Two, and eventually Microservice One, leading to a cascading failure throughout the system.
@@ -25,9 +35,26 @@ The circuit breaker pattern is designed to prevent cascading failures in microse
 
 The flow between these states helps reduce the number of calls to a failing service and prevents wasting resources. If the service recovers, the circuit breaker returns to normal operation; if not, it continues to block requests until the service becomes available again. This mechanism ensures a more resilient microservices architecture by handling service failures gracefully and avoiding cascading failures.
 
+## Technologies Used
+- TBU
+
+## Architecture Overview
+- TBU
+
+## Setup and Run Instructions
+- TBU
+
 # References
 - Course: [Building Microservices with Spring Boot & Spring Cloud](https://www.udemy.com/course/building-microservices-with-spring-boot-and-spring-cloud/) by [Ramesh Fadatare (Java Guides)](https://www.udemy.com/user/ramesh-fadatare/)
-- [TBU](https://spring.io/projects/spring-cloud-circuitbreaker)
-- [TBU](https://resilience4j.readme.io/)
-- [TBU](https://resilience4j.readme.io/docs/circuitbreaker)
-- [TBU](https://resilience4j.readme.io/docs/retry)
+- [Spring Cloud Circuit Breaker](https://spring.io/projects/spring-cloud-circuitbreaker)
+- [Resilience4j is a fault tolerance library for Java™](https://resilience4j.readme.io/)
+- [CircuitBreaker](https://resilience4j.readme.io/docs/circuitbreaker)
+- [Retry](https://resilience4j.readme.io/docs/retry)
+
+## Contributing
+Contributions are welcome! Please submit a pull request or open an issue to get started.
+
+## License
+
+&copy; 2024 tienhuynh-tn. This project is licensed under the [MIT License](https://github.com/tienhuynh-tn/circuit-breaker-using-resilience4j-implementation/blob/main/LICENSE).
+
