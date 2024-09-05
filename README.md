@@ -1,5 +1,7 @@
 # Circuit Breaker using Resilience4J Implementation
 
+This repository demonstrates how to implement the **circuit breaker pattern** in a Spring Boot application using the **Resilience4j library**. This pattern helps manage failures and latencies in distributed systems by providing fault tolerance to potentially failing calls.
+
 ## Table of Contents
 - [What Problems Does the Circuit Breaker Pattern Solve](#what-problems-does-the-circuit-breaker-pattern-solve)
 - [How the Circuit Breaker Pattern Works](#how-the-circuit-breaker-pattern-works)
