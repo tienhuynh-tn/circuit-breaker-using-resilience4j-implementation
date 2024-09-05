@@ -6,6 +6,7 @@ import com.tienhuynh_tn.dto.EmployeeDto;
 import com.tienhuynh_tn.entity.Employee;
 import com.tienhuynh_tn.repository.EmployeeRepository;
 import com.tienhuynh_tn.service.EmployeeService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +47,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return savedEmployeeDto;
     }
 
+    @CircuitBreaker(name = "${spring.application.name}", fallbackMethod = "getDefaultDepartment")
     @Override
     public APIResponseDto getEmployeeById(Long employeeId) {
 
@@ -80,9 +82,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = employeeRepository.findById(employeeId).get();
 
         DepartmentDto departmentDto = new DepartmentDto();
-        departmentDto.setDepartmentName("R&D Department");
-        departmentDto.setDepartmentCode("RD001");
-        departmentDto.setDepartmentDescription("Research and Development Department");
+        departmentDto.setDepartmentName("Default Department");
+        departmentDto.setDepartmentCode("DD");
+        departmentDto.setDepartmentDescription("Default");
 
         EmployeeDto employeeDto = new EmployeeDto(
                 employee.getId(),

@@ -11,6 +11,9 @@
      hibernate:
        ddl-auto: update
 
+   application:
+     name: employee-service
+
  server:
    port: 8081
 
