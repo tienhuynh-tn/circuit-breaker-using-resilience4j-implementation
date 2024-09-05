@@ -42,3 +42,10 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
+# Retry configuration
+  retry:
+    instances:
+      employee-service:
+        registerHealthIndicator: true
+        maxRetryAttempts: 5
+        waitDuration: 2
