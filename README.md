@@ -37,10 +37,23 @@ The circuit breaker pattern is designed to prevent cascading failures in microse
 The flow between these states helps reduce the number of calls to a failing service and prevents wasting resources. If the service recovers, the circuit breaker returns to normal operation; if not, it continues to block requests until the service becomes available again. This mechanism ensures a more resilient microservices architecture by handling service failures gracefully and avoiding cascading failures.
 
 ## Technologies Used
-- TBU
+### Backend
+- **Java**: Version 11
+- **Spring Boot**: Version 2.7.4
+- **Apache Kafka**: Distributed streaming platform
+- **Apache Maven**: Version 3.8.4 for build automation
+
+### Database
+- **MySQL**: Relational Database Management System
+
+### Tools
+- **IntelliJ IDEA**: 2024.1.4 (Community Edition)
 
 ## Architecture Overview
-- TBU
+The project follows a microservices architecture and comprises two main components:
+
+1. **Department Service**
+2. **Employee Service**
 
 ## Setup and Run Instructions
 - TBU
